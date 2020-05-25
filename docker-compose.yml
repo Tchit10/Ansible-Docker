@@ -6,8 +6,7 @@ services:
       dockerfile: ./master.Dockerfile
     working_dir: /root/playbooks
     volumes:
-      - /b/Ansible/playbooks:/root/playbooks
-      - /b/Ansible/config:/etc/ansible
+      - /B/Ansible/docker/Ansible-Docker/master/ansible:/root/playbooks
     command: tail -f /dev/null
 
   web:
@@ -19,10 +18,3 @@ services:
     build:
       context: .
       dockerfile: ./server.Dockerfile
-
-  lb:
-    build:
-      context: .
-      dockerfile: ./server.Dockerfile
-    ports:
-    - 8080:80
