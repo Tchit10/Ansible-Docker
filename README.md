@@ -14,9 +14,9 @@ Verify if network connection is working between master and managed hosts:
 
 `ping -c 2 ansible-docker_web_1`
 
-## Run script foo adding host's SSH fingerprint
+## Run script for adding host's SSH fingerprint
 
-Run a [sample script](./master/ansible/add_ssh.yml) that add host's SSH fingerprint on the master node:
+Run a [sample script](./master/ansible/add_ssh.sh) that add host's SSH fingerprint on the master node:
 
 `sh ./add.ssh.sh`
 
