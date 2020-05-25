@@ -1,5 +1,0 @@
-[web]
-ansible-docker_web_1 ansible_user=root ansible_ssh_pass=ansible
-
-[db]
-ansible-docker_db_1 ansible_user=root ansible_ssh_pass=ansible
