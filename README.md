@@ -18,7 +18,7 @@ Verify if network connection is working between master and managed hosts:
 
 Run a [sample script](./master/ansible/add_ssh.sh) that add host's SSH fingerprint on the master node:
 
-`sh ./add.ssh.sh`
+`sh ./add_ssh.sh`
 
 ## Ansible playbooks
 
