@@ -6,7 +6,7 @@ services:
       dockerfile: ./master.Dockerfile
     working_dir: /root/playbooks
     volumes:
-      - /B/Ansible/docker/Ansible-Docker/master/ansible:/root/playbooks
+      - ./master/ansible:/root/playbooks
     command: tail -f /dev/null
 
   web:
