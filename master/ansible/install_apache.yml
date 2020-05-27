@@ -1,0 +1,17 @@
+---
+- name: "Apache Installation"
+  hosts: web
+  tasks:
+    - name: "Install apache package"
+      apt:
+        name: "apache2"
+        state: "present"
+    - name: "Start apache service"
+      service:
+        name: "apache2"
+        state: "started"
+        enabled: yes
+    - name: "Create test.html file"
+      copy:
+        dest: "/var/www/html/test.html"
+        content: "<html>\n<body>\n<p> hostname is: {{ $(hostname) }}</p>\n</body>\n</html>"
