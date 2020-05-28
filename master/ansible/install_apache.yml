@@ -14,4 +14,4 @@
     - name: "Create test.html file"
       copy:
         dest: "/var/www/html/test.html"
-        content: "<html>\n<body>\n<p> hostname is: {{ $(hostname) }}</p>\n</body>\n</html>"
+        content: "<html>\n<body>\n<p> hostname is: {{ inventory_hostname }}</p>\n</body>\n</html>"

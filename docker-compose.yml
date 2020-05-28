@@ -5,6 +5,8 @@ services:
       context: .
       dockerfile: ./master.Dockerfile
     working_dir: /root/playbooks
+    image: ansible-docker_master
+    hostname: ansible-docker_master
     volumes:
       - ./master/ansible:/root/playbooks
     command: tail -f /dev/null
@@ -13,10 +15,14 @@ services:
     build:
       context: .
       dockerfile: ./server.Dockerfile
+    image: ansible-docker_web
+    hostname: ansible-docker_web
     ports:
-      - 8080:80
+      - 8080-8082:80
 
   db:
     build:
       context: .
       dockerfile: ./server.Dockerfile
+    image: ansible-docker_db
+    hostname: ansible-docker_db

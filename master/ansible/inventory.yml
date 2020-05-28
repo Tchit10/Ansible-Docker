@@ -4,12 +4,6 @@ all:
     web:
       hosts:
         ansible-docker_web_[1:3]
-      vars:
-        ansible_user: root
-        ansible_ssh_pass: ansible
     db:
       hosts:
         ansible-docker_db_1
-      vars:
-        ansible_user: root
-        ansible_ssh_pass: ansible
